@@ -10,6 +10,17 @@
   </head>
 
   <body>
-    <%= yield %>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <h5 class="navbar-brand" href="#">E-bouffe</h5>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <%= link_to "List of restaurants", restaurants_path, class: "nav-link"%>
+          <%= link_to "Create a restaurant", new_restaurant_path, class: "nav-link btn btn-outline-secondary"%>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <%= yield %>
+    </div>
   </body>
 </html>
